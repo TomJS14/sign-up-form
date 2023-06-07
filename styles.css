@@ -115,7 +115,7 @@ body  {
     background-size: 100vh;
     background-repeat: no-repeat;
     background-color: var(--bg-secondary);
-    width: 5rem;
+    width: 9rem;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -146,7 +146,7 @@ body  {
 }
 
 .link-text {
-    display: none;
+    
     margin-left: 1rem;
 }
 
@@ -159,25 +159,13 @@ body  {
     
 }
 
-.navbar:hover {
-    width: 9rem;
- 
-}
-
-.navbar:hover .link-text {
-    display: block;
- 
-}
 
 .navbar:hover svg {
     transform: rotate(270deg);
     transition: var(--transition-speed);
 }
 
-.navbar:hover button {
-    scale: 1.5;
-    margin: 15px;
-}
+
 
 
 
@@ -200,7 +188,6 @@ h1 {
 
 
 fieldset {
-    border: 2px solid green;
     border-radius: 5px;
     color: var(--text-primary);
     font-size: 0.7rem;
@@ -283,6 +270,7 @@ input:placeholder-shown {
     margin: 0;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
+    left: 100px;
     
 }

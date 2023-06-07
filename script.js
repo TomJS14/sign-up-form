@@ -1,8 +1,11 @@
 const blob = document.querySelector(".blob")
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+const password = document.querySelector(".password")
+const confirmPassword = document.querySelector(".confirmPassword")
+const submit = document.querySelector(".formSubmit")
+const error = document.querySelector(".error")
 
-
-/* Blob movement */
+/* /* Blob movement */
 document.body.onpointermove = event => {
     const { clientX, clientY } = event;
 
@@ -31,4 +34,24 @@ document.querySelector("h1").onmouseover = event => {
     iterations += 2;
 
     }, 40);
+}
+
+confirmPassword.addEventListener("keyup", passwordCheck)
+password.addEventListener("keyup", passwordCheck)
+
+function passwordCheck() {
+    if (confirmPassword.value === password.value) {
+        confirmPassword.setAttribute("style", "background-color: green")
+        error.textContent = ""
+        submit.disabled = false;
+        console.log("match")
+    }
+    else {
+        confirmPassword.setAttribute("style", "background-color: red")
+        error.setAttribute("style", "color: white");
+        error.textContent = "Passwords do not match"
+        console.log("no match");
+        submit.disabled = true;
+        
+    }
 }
